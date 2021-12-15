@@ -31,7 +31,7 @@ steps:
   inputs:
     awsCredentials: 'aws-user-admin'
     regionName: 'us-east-1'
-    bucketName: 'handy-azure-bucket'
+    bucketName: 'handy-azure-bucket-test'
     globExpressions: '**'
     createBucket: true
 
