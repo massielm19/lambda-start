@@ -35,20 +35,11 @@ steps:
     command: 'deployFunction'
     packageOnly: false
     functionName: 'start-ec2'
-- task: LambdaNETCoreDeploy@1
-- task: LambdaNETCoreDeploy@1
+- task: S3Upload@1
   inputs:
     awsCredentials: 'aws-user-admin'
     regionName: 'us-east-1'
-    command: 'deployFunction'
-    packageOnly: false
-    lambdaProjectPath: '$(System.DefaultWorkingDirectory)'
-    functionName: 
-  inputs:
-    awsCredentials: 'aws-user-admin'
-    regionName: 'us-east-1'
-    command: 'deployFunction'
-    packageOnly: false
-    lambdaProjectPath: 'https://dev.azure.com/massielmendoza/_git/massielmendoza?path=/lambda_function.py'
-    functionName: 'lambda_function.py'
+    bucketName: 'handy-azure-bucket'
+    globExpressions: '**'
+    createBucket: true
 
