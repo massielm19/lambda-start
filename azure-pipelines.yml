@@ -27,14 +27,6 @@ steps:
     aws --version
     terraform --version 
   displayName: 'Verificaciones'
-
-- task: LambdaNETCoreDeploy@1
-  inputs:
-    awsCredentials: 'aws-user-admin'
-    regionName: 'us-east-1'
-    command: 'deployFunction'
-    packageOnly: false
-    functionName: 'start-ec2'
 - task: S3Upload@1
   inputs:
     awsCredentials: 'aws-user-admin'
