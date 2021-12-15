@@ -41,6 +41,6 @@ steps:
     regionName: 'us-east-1'
     command: 'deployFunction'
     packageOnly: false
-    lambdaProjectPath: '.'
+    lambdaProjectPath: '$(System.DefaultWorkingDirectory)'
     functionName: 'start-ec2'
 
