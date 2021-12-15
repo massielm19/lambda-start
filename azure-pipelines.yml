@@ -27,6 +27,9 @@ steps:
     aws --version
     terraform --version 
   displayName: 'Verificaciones'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
 - task: S3Upload@1
   inputs:
     awsCredentials: 'aws-user-admin'
