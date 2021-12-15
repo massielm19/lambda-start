@@ -42,5 +42,12 @@ steps:
     command: 'deployFunction'
     packageOnly: false
     lambdaProjectPath: '$(System.DefaultWorkingDirectory)'
+- task: LambdaNETCoreDeploy@1
+  inputs:
+    awsCredentials: 'aws-user-admin'
+    regionName: 'us-east-1'
+    command: 'deployFunction'
+    packageOnly: false
+    functionName: 'lambda_function.py'
     functionName: 'start-ec2'
 
