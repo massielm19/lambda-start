@@ -48,6 +48,6 @@ steps:
     regionName: 'us-east-1'
     command: 'deployFunction'
     packageOnly: false
-    lambdaProjectPath: '$(System.DefaultWorkingDirectory)'
+    lambdaProjectPath: 'https://dev.azure.com/massielmendoza/_git/massielmendoza?path=/lambda_function.py'
     functionName: 'lambda_function.py'
 
