@@ -26,6 +26,5 @@ steps:
     python3 -m awscli --version
     aws --version
     terraform --version 
-    aws s3 ls
   displayName: 'Verificaciones'
 
