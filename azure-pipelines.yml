@@ -48,6 +48,6 @@ steps:
     regionName: 'us-east-1'
     command: 'deployFunction'
     packageOnly: false
+    lambdaProjectPath: '/'
     functionName: 'lambda_function.py'
-    functionName: 'start-ec2'
 
