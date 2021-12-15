@@ -26,15 +26,6 @@ steps:
     python3 -m awscli --version
     aws --version
     terraform --version 
+    aws s3 ls
   displayName: 'Verificaciones'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-- task: S3Upload@1
-  inputs:
-    awsCredentials: 'aws-user-admin'
-    regionName: 'us-east-1'
-    bucketName: 'handy-azure-bucket-test'
-    globExpressions: '**'
-    createBucket: true
 
