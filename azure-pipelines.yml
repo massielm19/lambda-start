@@ -24,7 +24,7 @@ steps:
     sudo apt-get install python3-pip
 
   displayName: 'Instalaciones'
-  - script:
+- script: |
     terraform version
     aws --version
     python3 -m awscli --version
