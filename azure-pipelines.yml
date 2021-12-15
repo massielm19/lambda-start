@@ -14,6 +14,14 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo massiel.
-    echo mendoza
+    sudo apt-get update
+    sudo apt-get install unzip
+    echo .....................
+    echo Instalando terraform
+    echo .....................
+    wget https://releases.hashicorp.com/terraform/0.14.3/terraform_0.14.3_linux_amd64.zip
+    sudo apt install zip -y
+    sudo unzip terraform_0.14.3_linux_amd64.zip
+    sudo mv terraform /usr/local/bin/
+    terraform version
   displayName: 'Run a multi-line script'
